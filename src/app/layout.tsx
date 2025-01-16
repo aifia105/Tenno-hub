@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./provider/provider";
+import { Providers, ReduxProviders } from "./provider/provider";
 import NavBarComponent from "@/components/navBar";
 
 export const metadata: Metadata = {
@@ -16,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body>
-        <Providers>
-          <NavBarComponent />
-          {children}
-        </Providers>
-      </body>
-    </html>
+    <ReduxProviders>
+      <html lang="en" className="dark">
+        <body>
+          <Providers>
+            <NavBarComponent />
+            {children}
+          </Providers>
+        </body>
+      </html>
+    </ReduxProviders>
   );
 }

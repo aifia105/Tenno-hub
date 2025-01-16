@@ -19,6 +19,7 @@ export default {
           200: "#0D2137",
           300: "#102945",
         },
+        lightGray: "#f5f5f5",
       },
       container: {
         center: true,
@@ -46,7 +47,7 @@ export default {
         light: {
           colors: {
             background: {
-              DEFAULT: "#ffffff",
+              DEFAULT: "#f5f5f5",
             },
           },
         },
